@@ -351,8 +351,7 @@ a {
   box-shadow: var(--shadow);
 }
 
-.portrait-frame::before,
-.portrait-frame::after {
+.portrait-frame::before {
   position: absolute;
   z-index: 2;
   content: "";
@@ -364,39 +363,12 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.portrait-frame::after {
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 35%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.76), transparent);
-}
-
 .portrait-frame img {
   width: 100%;
   aspect-ratio: 0.95;
   object-fit: cover;
   object-position: 50% 34%;
   filter: contrast(1.06) saturate(0.94);
-}
-
-.frame-caption {
-  position: absolute;
-  left: 1rem;
-  right: 1rem;
-  bottom: 1rem;
-  z-index: 3;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  color: var(--text);
-  font-size: 0.76rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.frame-caption span:last-child {
-  color: var(--green);
 }
 
 .waveform {
@@ -963,7 +935,8 @@ a {
   }
 
   .portrait-frame img {
-    aspect-ratio: 1.55;
+    aspect-ratio: 1;
+    object-position: 50% 50%;
   }
 
   .waveform {
