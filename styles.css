@@ -633,7 +633,7 @@ a {
 
 .bio-note strong {
   display: block;
-  max-width: 9ch;
+  max-width: 16ch;
   margin-top: 0.7rem;
   font-family: var(--display);
   font-size: clamp(3rem, 7vw, 5.4rem);
@@ -988,6 +988,11 @@ a {
 
   .stream-actions {
     justify-content: start;
+  }
+
+  .bio-note strong {
+    max-width: 100%;
+    font-size: clamp(2.1rem, 10vw, 3.5rem);
   }
 
   .site-footer {
