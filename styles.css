@@ -162,6 +162,12 @@ a {
   border-radius: var(--radius);
 }
 
+.site-nav .nav-follow {
+  color: #fff;
+  background: linear-gradient(180deg, #f13039, var(--red));
+  box-shadow: 0 12px 24px rgba(228, 33, 44, 0.24);
+}
+
 .site-nav .nav-cta::after {
   display: none;
 }
