@@ -536,14 +536,6 @@ a {
   text-shadow: 3px 3px 0 #050505;
 }
 
-.release-rank small {
-  margin-top: 0.5rem;
-  color: var(--green);
-  font-size: 0.76rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
 .release-copy {
   min-width: 0;
 }
