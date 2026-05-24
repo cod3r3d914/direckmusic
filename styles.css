@@ -291,6 +291,11 @@ a {
   margin-top: 2rem;
 }
 
+.button-youtube {
+  flex-basis: 100%;
+  max-width: 390px;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -317,6 +322,16 @@ a {
   stroke-width: 2;
   stroke-linecap: square;
   stroke-linejoin: miter;
+}
+
+.button .youtube-logo {
+  width: 24px;
+  height: 24px;
+  stroke: none;
+}
+
+.button .youtube-play {
+  fill: var(--red);
 }
 
 .button:hover,
