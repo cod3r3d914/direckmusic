@@ -156,15 +156,10 @@ a {
 .site-nav .nav-cta {
   min-width: 92px;
   padding: 0.72rem 1rem;
-  color: #080808;
-  text-align: center;
-  background: var(--text);
-  border-radius: var(--radius);
-}
-
-.site-nav .nav-follow {
   color: #fff;
+  text-align: center;
   background: linear-gradient(180deg, #f13039, var(--red));
+  border-radius: var(--radius);
   box-shadow: 0 12px 24px rgba(228, 33, 44, 0.24);
 }
 
