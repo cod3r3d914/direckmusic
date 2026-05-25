@@ -402,6 +402,11 @@ a {
   height: auto;
 }
 
+.social-card-icon-soundcloud img {
+  width: 38px;
+  height: auto;
+}
+
 .social-card-text-icon {
   color: #fff;
   font-size: 0.88rem;
@@ -456,6 +461,11 @@ a {
 
 .social-card-compact .social-card-icon-youtube img {
   width: 35px;
+  height: auto;
+}
+
+.social-card-compact .social-card-icon-soundcloud img {
+  width: 36px;
   height: auto;
 }
 
