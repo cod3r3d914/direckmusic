@@ -289,24 +289,27 @@ a {
 
 .hero-actions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 11.25rem));
-  justify-content: start;
+  justify-items: center;
+  gap: 0.9rem;
+  width: min(100%, 42rem);
   margin-top: 2rem;
 }
 
-.button-youtube {
-  grid-column: 1 / -1;
-  justify-self: center;
+.hero-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 100%;
 }
 
 .hero-actions .button {
-  width: 100%;
+  width: 11.25rem;
   min-width: 0;
+  gap: 0.5rem;
+  padding-inline: 0.65rem;
+  font-size: 0.76rem;
   white-space: nowrap;
-}
-
-.hero-actions .button-youtube {
-  max-width: 11.25rem;
 }
 
 .button {
@@ -976,10 +979,6 @@ a {
     margin-top: 1.35rem;
   }
 
-  .hero-actions {
-    grid-template-columns: repeat(2, minmax(0, 11.25rem));
-  }
-
   .artist-meta {
     display: grid;
     gap: 0.25rem;
@@ -1029,16 +1028,6 @@ a {
 
   .site-footer {
     display: grid;
-  }
-}
-
-@media (max-width: 380px) {
-  .hero-actions {
-    grid-template-columns: minmax(0, 11.25rem);
-  }
-
-  .button-youtube {
-    grid-column: auto;
   }
 }
 
