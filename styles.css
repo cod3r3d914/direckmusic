@@ -232,18 +232,6 @@ a {
   overflow: hidden;
 }
 
-.hero::before {
-  position: absolute;
-  inset: 11% auto auto -8%;
-  width: min(45vw, 520px);
-  height: 54%;
-  content: "";
-  border-left: 2px solid rgba(228, 33, 44, 0.5);
-  border-bottom: 2px solid rgba(88, 209, 91, 0.3);
-  transform: skewX(-12deg);
-  opacity: 0.8;
-}
-
 .hero-copy,
 .hero-media {
   position: relative;
