@@ -143,9 +143,11 @@
           <h2 id="music-title">Top Songs</h2>
           <div class="player-switch" aria-label="Choose embedded music player">
             <span>Music player</span>
-            <button class="is-active" type="button" aria-pressed="true" data-player-toggle="spotify">Spotify</button>
-            <button type="button" aria-pressed="false" data-player-toggle="apple">Apple Music</button>
-            <button type="button" aria-pressed="false" data-player-toggle="soundcloud">SoundCloud</button>
+            <div class="player-toggle" role="group" aria-label="Music player options">
+              <button class="is-active" type="button" aria-pressed="true" data-player-toggle="spotify">Spotify</button>
+              <button type="button" aria-pressed="false" data-player-toggle="apple">Apple Music</button>
+              <button type="button" aria-pressed="false" data-player-toggle="soundcloud">SoundCloud</button>
+            </div>
           </div>
         </div>
 

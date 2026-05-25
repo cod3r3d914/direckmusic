@@ -491,7 +491,7 @@ a {
 .player-switch {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: 0.55rem;
   align-items: center;
   justify-content: flex-end;
 }
@@ -504,23 +504,32 @@ a {
   text-transform: uppercase;
 }
 
+.player-toggle {
+  display: inline-grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.18rem;
+  padding: 0.22rem;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid #050505;
+  border-radius: var(--radius);
+  box-shadow: inset 0 0 0 1px rgba(246, 240, 232, 0.12);
+}
+
 .player-switch button {
   min-height: 42px;
-  padding: 0.72rem 0.95rem;
+  padding: 0.68rem 0.85rem;
   color: var(--text);
   font: inherit;
   font-size: 0.82rem;
   font-weight: 900;
   text-transform: uppercase;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid #050505;
-  border-radius: var(--radius);
-  box-shadow: inset 0 0 0 1px rgba(246, 240, 232, 0.12);
+  background: transparent;
+  border: 0;
+  border-radius: calc(var(--radius) - 2px);
   transition:
     color 160ms ease,
-    background 160ms ease,
-    transform 160ms ease;
+    background 160ms ease;
 }
 
 .player-switch button:hover,
@@ -531,11 +540,6 @@ a {
   box-shadow:
     inset 0 0 0 1px rgba(0, 0, 0, 0.72),
     0 12px 24px rgba(228, 33, 44, 0.2);
-}
-
-.player-switch button:hover,
-.player-switch button:focus-visible {
-  transform: translateY(-1px);
 }
 
 .release-list {
@@ -1155,6 +1159,11 @@ a {
   .section-heading {
     display: grid;
     align-items: start;
+  }
+
+  .player-switch,
+  .player-toggle {
+    width: 100%;
   }
 
   .release-card,
