@@ -706,9 +706,15 @@ a {
   margin-top: 1rem;
 }
 
+.music-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .music-video {
   overflow: hidden;
-  margin-top: 1rem;
   padding: clamp(0.85rem, 2vw, 1rem);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -1007,6 +1013,7 @@ a {
   }
 
   .release-card,
+  .music-video-grid,
   .video-strip,
   .social-grid {
     grid-template-columns: 1fr;
