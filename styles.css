@@ -298,6 +298,13 @@ a {
   margin-top: 2rem;
 }
 
+.hero-actions.social-card-stack {
+  justify-items: stretch;
+  gap: 1rem;
+  width: min(100%, 46rem);
+  margin-top: 2.15rem;
+}
+
 .hero-action-row {
   display: flex;
   flex-wrap: wrap;
@@ -313,6 +320,113 @@ a {
   padding-inline: 0.65rem;
   font-size: 0.76rem;
   white-space: nowrap;
+}
+
+.social-card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  min-height: 82px;
+  padding: 0.9rem 1.15rem;
+  overflow: hidden;
+  color: #fff;
+  text-decoration: none;
+  background:
+    radial-gradient(circle at 87% 52%, rgba(228, 33, 44, 0.2), transparent 28%),
+    linear-gradient(108deg, rgba(38, 5, 6, 0.88), rgba(10, 7, 8, 0.94) 52%, rgba(45, 4, 7, 0.82));
+  border-radius: 16px;
+  box-shadow:
+    0 0 0 1px rgba(228, 33, 44, 0.46),
+    0 18px 38px rgba(228, 33, 44, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transform: translateZ(0);
+  transition:
+    transform 170ms ease,
+    box-shadow 170ms ease,
+    background 170ms ease;
+}
+
+.social-card::before {
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04), transparent 34%),
+    radial-gradient(circle at 9% 50%, rgba(228, 33, 44, 0.14), transparent 31%);
+  border-radius: inherit;
+  opacity: 0.72;
+}
+
+.social-card:hover,
+.social-card:focus-visible {
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 0 1px rgba(255, 60, 68, 0.66),
+    0 22px 46px rgba(228, 33, 44, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.social-card:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.72);
+  outline-offset: 4px;
+}
+
+.social-card-icon {
+  display: grid;
+  flex: 0 0 58px;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  background: radial-gradient(circle at 34% 26%, #171717, #030303 72%);
+  border-radius: 999px;
+  box-shadow:
+    0 0 0 1px #050505,
+    0 0 0 2px rgba(228, 33, 44, 0.86),
+    0 8px 18px rgba(0, 0, 0, 0.46);
+}
+
+.social-card-icon img {
+  display: block;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.social-card-icon-youtube img {
+  width: 40px;
+  height: auto;
+}
+
+.social-card-label {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: clamp(1rem, 3.4vw, 1.18rem);
+  font-weight: 850;
+  line-height: 1.15;
+  color: #fff;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.75);
+}
+
+.social-card-arrow {
+  flex: 0 0 auto;
+  font-size: 2.1rem;
+  font-weight: 300;
+  line-height: 1;
+  color: #ff3038;
+  text-shadow:
+    0 0 12px rgba(228, 33, 44, 0.72),
+    0 0 24px rgba(228, 33, 44, 0.34);
+  transition: transform 170ms ease;
+}
+
+.social-card:hover .social-card-arrow,
+.social-card:focus-visible .social-card-arrow {
+  transform: translateX(4px);
 }
 
 .button {
@@ -1124,6 +1238,12 @@ a {
     margin-top: 1.35rem;
   }
 
+  .hero-actions.social-card-stack {
+    gap: 0.86rem;
+    width: 100%;
+    margin-top: 1.45rem;
+  }
+
   .hero-action-row {
     gap: 0.85rem;
   }
@@ -1132,6 +1252,36 @@ a {
     width: 100%;
     padding-inline: 1rem;
     font-size: 0.9rem;
+  }
+
+  .social-card {
+    gap: 0.9rem;
+    min-height: 76px;
+    padding: 0.78rem 0.92rem;
+    border-radius: 15px;
+  }
+
+  .social-card-icon {
+    flex-basis: 52px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .social-card-icon img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-card-icon-youtube img {
+    width: 36px;
+  }
+
+  .social-card-label {
+    font-size: clamp(1rem, 4.8vw, 1.15rem);
+  }
+
+  .social-card-arrow {
+    font-size: 1.95rem;
   }
 
   .artist-meta {
