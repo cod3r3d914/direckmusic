@@ -288,12 +288,25 @@ a {
 }
 
 .hero-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 11.25rem));
+  justify-content: start;
   margin-top: 2rem;
 }
 
 .button-youtube {
-  flex-basis: 100%;
-  max-width: 390px;
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.hero-actions .button {
+  width: 100%;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.hero-actions .button-youtube {
+  max-width: 11.25rem;
 }
 
 .button {
@@ -325,8 +338,8 @@ a {
 }
 
 .button .youtube-logo {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   stroke: none;
 }
 
@@ -963,6 +976,10 @@ a {
     margin-top: 1.35rem;
   }
 
+  .hero-actions {
+    grid-template-columns: repeat(2, minmax(0, 11.25rem));
+  }
+
   .artist-meta {
     display: grid;
     gap: 0.25rem;
@@ -1012,6 +1029,16 @@ a {
 
   .site-footer {
     display: grid;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-actions {
+    grid-template-columns: minmax(0, 11.25rem);
+  }
+
+  .button-youtube {
+    grid-column: auto;
   }
 }
 
