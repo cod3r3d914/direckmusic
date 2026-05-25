@@ -120,6 +120,7 @@ a {
 }
 
 .brand-music {
+  margin-left: 0.12em;
   color: var(--red);
   text-shadow: 2px 2px 0 rgba(80, 0, 4, 0.72);
 }
