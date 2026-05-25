@@ -402,6 +402,13 @@ a {
   height: auto;
 }
 
+.social-card-text-icon {
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+}
+
 .social-card-label {
   flex: 1 1 auto;
   min-width: 0;
@@ -427,6 +434,37 @@ a {
 .social-card:hover .social-card-arrow,
 .social-card:focus-visible .social-card-arrow {
   transform: translateX(4px);
+}
+
+.social-card-compact {
+  gap: 0.9rem;
+  min-height: 74px;
+  padding: 0.78rem 0.95rem;
+  border-radius: 15px;
+}
+
+.social-card-compact .social-card-icon {
+  flex-basis: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+.social-card-compact .social-card-icon img {
+  width: 31px;
+  height: 31px;
+}
+
+.social-card-compact .social-card-icon-youtube img {
+  width: 35px;
+  height: auto;
+}
+
+.social-card-compact .social-card-label {
+  font-size: clamp(0.95rem, 2vw, 1.04rem);
+}
+
+.social-card-compact .social-card-arrow {
+  font-size: 1.8rem;
 }
 
 .button {
@@ -1052,43 +1090,12 @@ a {
 
 .social-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.9rem;
 }
 
 .social-grid a {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  min-height: 84px;
-  padding: 1rem;
-  color: var(--text);
-  font-weight: 850;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  transition:
-    color 160ms ease,
-    background 160ms ease;
-}
-
-.social-grid a:hover,
-.social-grid a:focus-visible {
-  color: var(--green);
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.social-icon {
-  display: grid;
-  flex: 0 0 auto;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  color: #050505;
-  font-size: 1.05rem;
-  font-weight: 950;
-  background: var(--text);
-  border-radius: 50%;
+  width: 100%;
 }
 
 .booking {
