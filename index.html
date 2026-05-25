@@ -145,10 +145,11 @@
             <span>Music player</span>
             <button class="is-active" type="button" aria-pressed="true" data-player-toggle="spotify">Spotify</button>
             <button type="button" aria-pressed="false" data-player-toggle="apple">Apple Music</button>
+            <button type="button" aria-pressed="false" data-player-toggle="soundcloud">SoundCloud</button>
           </div>
         </div>
 
-        <div class="release-list">
+        <div class="release-list" data-release-list>
           <article class="release-card">
             <div class="release-rank" aria-hidden="true">
               <span>01</span>
@@ -313,6 +314,23 @@
               ></iframe>
             </div>
           </article>
+        </div>
+
+        <div class="soundcloud-player-panel" hidden data-soundcloud-player>
+          <div class="soundcloud-player-copy">
+            <h3>Live and Direck 2024 Mix</h3>
+            <p>Stream the SoundCloud playlist directly from DireckMusic.</p>
+            <a href="https://soundcloud.com/direckmusic/sets/live-and-direck-2024-mix" target="_blank" rel="noopener">Open SoundCloud</a>
+          </div>
+          <div class="soundcloud-embed">
+            <iframe
+              title="Live and Direck 2024 Mix by DireckMusic on SoundCloud"
+              loading="lazy"
+              scrolling="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?visual=true&amp;url=https%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F1899551015&amp;show_artwork=true"
+            ></iframe>
+          </div>
         </div>
 
         <div class="stream-panel" aria-label="Streaming links">

@@ -4,6 +4,8 @@ const waveform = document.querySelector("[data-waveform]");
 const playerToggles = document.querySelectorAll("[data-player-toggle]");
 const playerEmbeds = document.querySelectorAll("[data-player-embed]");
 const trackPlatformLinks = document.querySelectorAll(".track-platform-link");
+const releaseList = document.querySelector("[data-release-list]");
+const soundcloudPlayer = document.querySelector("[data-soundcloud-player]");
 
 if (menuToggle && nav) {
   menuToggle.addEventListener("click", () => {
@@ -37,15 +39,27 @@ if (waveform) {
 if (playerToggles.length && playerEmbeds.length) {
   const platformLabels = {
     spotify: "Spotify",
-    apple: "Apple Music"
+    apple: "Apple Music",
+    soundcloud: "SoundCloud"
   };
 
   const setMusicPlayer = (platform) => {
+    const isSoundCloud = platform === "soundcloud";
+
     playerToggles.forEach((button) => {
       const isActive = button.dataset.playerToggle === platform;
       button.classList.toggle("is-active", isActive);
       button.setAttribute("aria-pressed", String(isActive));
     });
+
+    if (releaseList && soundcloudPlayer) {
+      releaseList.hidden = isSoundCloud;
+      soundcloudPlayer.hidden = !isSoundCloud;
+    }
+
+    if (isSoundCloud) {
+      return;
+    }
 
     playerEmbeds.forEach((embed) => {
       const iframe = embed.querySelector("iframe");

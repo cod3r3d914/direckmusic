@@ -543,6 +543,11 @@ a {
   gap: 0.8rem;
 }
 
+.release-list[hidden],
+.soundcloud-player-panel[hidden] {
+  display: none;
+}
+
 .release-card {
   display: grid;
   grid-template-columns: 108px minmax(260px, 1fr) minmax(300px, 430px);
@@ -623,6 +628,66 @@ a {
   display: block;
   width: 100%;
   height: 175px;
+  border: 0;
+}
+
+.soundcloud-player-panel {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.7fr) minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 1.6rem);
+  align-items: center;
+  min-height: 260px;
+  padding: clamp(0.85rem, 2vw, 1.1rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(90deg, rgba(228, 33, 44, 0.1), transparent 30%),
+    rgba(255, 255, 255, 0.025);
+}
+
+.soundcloud-player-copy h3 {
+  margin: 0 0 0.3rem;
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.soundcloud-player-copy p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.soundcloud-player-copy a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  color: var(--red);
+  font-size: 0.9rem;
+  font-weight: 860;
+}
+
+.soundcloud-player-copy a::before {
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid currentColor;
+}
+
+.soundcloud-embed {
+  overflow: hidden;
+  border: 1px solid rgba(246, 240, 232, 0.12);
+  border-radius: var(--radius);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.soundcloud-embed iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
   border: 0;
 }
 
@@ -1093,6 +1158,7 @@ a {
   }
 
   .release-card,
+  .soundcloud-player-panel,
   .music-video-grid,
   .video-strip,
   .social-grid {
