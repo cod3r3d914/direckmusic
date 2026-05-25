@@ -878,10 +878,16 @@ a {
 }
 
 .stream-actions {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 0.85rem;
-  justify-content: end;
+  width: min(100%, 22rem);
+  justify-content: stretch;
+}
+
+.stream-actions .social-card,
+.watch-actions .social-card,
+.booking-actions .social-card {
+  width: 100%;
 }
 
 .bio {
@@ -987,6 +993,13 @@ a {
   margin: 0;
   color: var(--muted);
   font-size: 1rem;
+}
+
+.watch-actions,
+.booking-actions {
+  display: grid;
+  gap: 0.85rem;
+  width: min(100%, 22rem);
 }
 
 .video-strip {
@@ -1331,13 +1344,14 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .stream-actions,
   .watch-actions,
   .booking-actions {
     width: 100%;
   }
 
   .stream-actions {
-    justify-content: start;
+    justify-content: stretch;
   }
 
   .bio-note strong {
