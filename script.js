@@ -1,6 +1,9 @@
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
 const waveform = document.querySelector("[data-waveform]");
+const playerToggles = document.querySelectorAll("[data-player-toggle]");
+const playerEmbeds = document.querySelectorAll("[data-player-embed]");
+const trackPlatformLinks = document.querySelectorAll(".track-platform-link");
 
 if (menuToggle && nav) {
   menuToggle.addEventListener("click", () => {
@@ -29,4 +32,53 @@ if (waveform) {
   waveform.innerHTML = levels
     .map((level, index) => `<span style="--level:${level}; --i:${index}"></span>`)
     .join("");
+}
+
+if (playerToggles.length && playerEmbeds.length) {
+  const platformLabels = {
+    spotify: "Spotify",
+    apple: "Apple Music"
+  };
+
+  const setMusicPlayer = (platform) => {
+    playerToggles.forEach((button) => {
+      const isActive = button.dataset.playerToggle === platform;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+
+    playerEmbeds.forEach((embed) => {
+      const iframe = embed.querySelector("iframe");
+      const src = embed.dataset[`${platform}Src`];
+      const title = embed.dataset[`${platform}Title`];
+
+      if (!iframe || !src) {
+        return;
+      }
+
+      if (iframe.getAttribute("src") !== src) {
+        iframe.setAttribute("src", src);
+      }
+
+      if (title) {
+        iframe.setAttribute("title", title);
+      }
+    });
+
+    trackPlatformLinks.forEach((link) => {
+      const href = link.dataset[`${platform}Link`];
+      if (!href) {
+        return;
+      }
+
+      link.setAttribute("href", href);
+      link.textContent = `Open ${platformLabels[platform]}`;
+    });
+  };
+
+  playerToggles.forEach((button) => {
+    button.addEventListener("click", () => {
+      setMusicPlayer(button.dataset.playerToggle);
+    });
+  });
 }
