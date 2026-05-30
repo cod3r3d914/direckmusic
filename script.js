@@ -1,6 +1,11 @@
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
+const hero = document.querySelector(".hero");
 const waveform = document.querySelector("[data-waveform]");
+const introPlayer = document.querySelector("[data-intro-player]");
+const introAudio = document.querySelector("[data-intro-audio]");
+const introToggle = document.querySelector("[data-intro-toggle]");
+const introLabel = document.querySelector("[data-intro-label]");
 const playerToggles = document.querySelectorAll("[data-player-toggle]");
 const playerEmbeds = document.querySelectorAll("[data-player-embed]");
 const trackPlatformLinks = document.querySelectorAll(".track-platform-link");
@@ -34,6 +39,75 @@ if (waveform) {
   waveform.innerHTML = levels
     .map((level, index) => `<span style="--level:${level}; --i:${index}"></span>`)
     .join("");
+}
+
+if (introAudio && introToggle) {
+  const setIntroState = (isPlaying) => {
+    introToggle.classList.toggle("is-playing", isPlaying);
+    introToggle.setAttribute("aria-pressed", String(isPlaying));
+    introToggle.setAttribute("aria-label", isPlaying ? "Pause intro music" : "Play intro music");
+
+    if (introLabel) {
+      introLabel.textContent = isPlaying ? "Pause intro" : "Play intro";
+    }
+  };
+
+  const pauseIntro = (reset = false) => {
+    introAudio.pause();
+
+    if (reset) {
+      try {
+        introAudio.currentTime = 0;
+      } catch (error) {
+        // Some browsers block seeking before metadata is ready.
+      }
+    }
+
+    setIntroState(false);
+  };
+
+  introToggle.addEventListener("click", async () => {
+    if (!introAudio.paused) {
+      pauseIntro();
+      return;
+    }
+
+    try {
+      await introAudio.play();
+      setIntroState(true);
+    } catch (error) {
+      pauseIntro();
+    }
+  });
+
+  introAudio.addEventListener("play", () => setIntroState(true));
+  introAudio.addEventListener("pause", () => setIntroState(false));
+  introAudio.addEventListener("ended", () => pauseIntro(true));
+
+  playerToggles.forEach((button) => {
+    button.addEventListener("click", () => pauseIntro(true));
+  });
+
+  if ("IntersectionObserver" in window && hero) {
+    const introObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting || entry.intersectionRatio < 0.35) {
+          pauseIntro(true);
+        }
+      });
+    }, { threshold: [0, 0.35, 1] });
+
+    introObserver.observe(hero);
+  } else if (introPlayer) {
+    window.addEventListener("scroll", () => {
+      const bounds = introPlayer.getBoundingClientRect();
+      const isVisible = bounds.bottom > 0 && bounds.top < window.innerHeight;
+
+      if (!isVisible) {
+        pauseIntro(true);
+      }
+    }, { passive: true });
+  }
 }
 
 if (playerToggles.length && playerEmbeds.length) {

@@ -114,10 +114,20 @@
         </div>
 
         <div class="hero-media" aria-label="Direck Music portrait">
+          <div class="hero-map-badge">
+            <img src="assets/ncmap-cutout.png" alt="North Carolina map graphic for Live and Direck" loading="eager" decoding="async" />
+          </div>
           <div class="portrait-frame">
             <img src="assets/direckavatar3.png" alt="Cody, artist behind Direck Music" />
           </div>
-          <div class="waveform" aria-hidden="true" data-waveform></div>
+          <div class="intro-player" data-intro-player>
+            <div class="waveform" aria-hidden="true" data-waveform></div>
+            <button class="intro-toggle" type="button" aria-label="Play intro music" aria-pressed="false" data-intro-toggle>
+              <span class="intro-toggle-icon" aria-hidden="true"></span>
+              <span data-intro-label>Play intro</span>
+            </button>
+            <audio src="assets/intromusic.mp3" preload="metadata" data-intro-audio></audio>
+          </div>
         </div>
       </section>
 
