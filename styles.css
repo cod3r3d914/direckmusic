@@ -286,24 +286,10 @@ a {
 }
 
 .hero h1 span:last-child {
-  color: transparent;
-  background-image:
-    linear-gradient(rgba(246, 240, 232, 0.18), rgba(246, 240, 232, 0.05)),
-    url("assets/ncmap2-cutout.png");
-  background-position:
-    center,
-    center 42%;
-  background-repeat: no-repeat;
-  background-size:
-    cover,
-    185% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1.45px rgba(246, 240, 232, 0.95);
+  color: var(--red);
   text-shadow:
-    4px 4px 0 rgba(80, 0, 4, 0.84),
-    0 0 22px rgba(246, 240, 232, 0.2),
+    4px 4px 0 rgba(80, 0, 4, 0.94),
+    0 0 26px rgba(228, 33, 44, 0.16),
     0 10px 34px rgba(0, 0, 0, 0.62);
 }
 
@@ -1620,16 +1606,9 @@ a {
   }
 
   .hero h1 span:last-child {
-    background-position:
-      center,
-      center 40%;
-    background-size:
-      cover,
-      220% auto;
-    -webkit-text-stroke: 1.2px rgba(246, 240, 232, 0.95);
     text-shadow:
-      3px 3px 0 rgba(80, 0, 4, 0.84),
-      0 0 18px rgba(246, 240, 232, 0.2),
+      3px 3px 0 rgba(80, 0, 4, 0.94),
+      0 0 22px rgba(228, 33, 44, 0.16),
       0 10px 26px rgba(0, 0, 0, 0.64);
   }
 
