@@ -6,6 +6,7 @@ const playerEmbeds = document.querySelectorAll("[data-player-embed]");
 const trackPlatformLinks = document.querySelectorAll(".track-platform-link");
 const releaseList = document.querySelector("[data-release-list]");
 const soundcloudPlayer = document.querySelector("[data-soundcloud-player]");
+const spotifyCatalog = document.querySelector("[data-spotify-catalog]");
 
 if (menuToggle && nav) {
   menuToggle.addEventListener("click", () => {
@@ -55,6 +56,10 @@ if (playerToggles.length && playerEmbeds.length) {
     if (releaseList && soundcloudPlayer) {
       releaseList.hidden = isSoundCloud;
       soundcloudPlayer.hidden = !isSoundCloud;
+    }
+
+    if (spotifyCatalog) {
+      spotifyCatalog.hidden = platform !== "spotify";
     }
 
     if (isSoundCloud) {

@@ -339,6 +339,14 @@ a {
   white-space: nowrap;
 }
 
+.hero-actions .hero-action-icon {
+  background: linear-gradient(145deg, rgba(228, 33, 44, 0.28), rgba(9, 2, 3, 0.96));
+  box-shadow:
+    0 0 0 1px rgba(246, 240, 232, 0.08),
+    0 0 0 2px rgba(228, 33, 44, 0.72),
+    0 10px 22px rgba(228, 33, 44, 0.18);
+}
+
 .social-card {
   position: relative;
   isolation: isolate;
@@ -735,6 +743,10 @@ a {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+}
+
+.catalog-actions[hidden] {
+  display: none;
 }
 
 .catalog-actions .social-card {
