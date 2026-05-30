@@ -339,7 +339,7 @@ a {
 }
 
 .hero-line-spacer {
-  min-height: calc(clamp(2.25rem, 6.2vw, 4.75rem) * 1.78);
+  min-height: calc(clamp(2.25rem, 6.2vw, 4.75rem) * 2.08);
 }
 
 .hero-line::before,
@@ -401,7 +401,7 @@ a {
   justify-items: stretch;
   gap: 1rem;
   width: min(100%, 46rem);
-  margin-top: 2.15rem;
+  margin-top: 2.85rem;
 }
 
 .hero-action-row {
@@ -1550,7 +1550,7 @@ a {
 
   .hero-line-spacer {
     margin-top: 2.05rem;
-    min-height: calc(clamp(2.35rem, 12vw, 4rem) * 1.8);
+    min-height: calc(clamp(2.35rem, 12vw, 4rem) * 2.22);
   }
 
   .hero-actions {
@@ -1561,7 +1561,7 @@ a {
   .hero-actions.social-card-stack {
     gap: 0.86rem;
     width: 100%;
-    margin-top: 1.45rem;
+    margin-top: 2.2rem;
   }
 
   .hero-action-row {
