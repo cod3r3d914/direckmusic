@@ -290,6 +290,10 @@ a {
   transform: rotate(-2deg);
 }
 
+.hero-subtitle span {
+  display: block;
+}
+
 .hero-line {
   max-width: 650px;
   margin: 1rem 0 0;
