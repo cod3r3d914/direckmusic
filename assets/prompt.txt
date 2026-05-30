@@ -1,0 +1,128 @@
+Perform a professional UX and conversion-focused cleanup of DireckMusic.com using modern music-industry website standards.
+
+IMPORTANT:
+Do NOT redesign the site.
+Do NOT change branding, colors, typography, imagery, SEO metadata, JSON-LD, sitemap, robots.txt, content themes, or overall layout structure.
+
+The goal is to reduce CTA duplication, improve visitor flow, and create a more focused artist experience.
+
+CORE STRATEGY
+
+The website should guide visitors through a simple journey:
+
+1. Discover Direck
+2. Listen to the music
+3. Watch videos
+4. Follow on preferred platform
+5. Contact for business opportunities
+
+Every section should have a clear purpose and avoid repeating actions already presented elsewhere.
+
+HERO SECTION
+
+Keep only two primary CTA buttons:
+
+- Listen Now
+- Watch Videos
+
+These should remain the most visually prominent actions on the entire site.
+
+Remove any additional social platform buttons from the hero if present.
+
+TOP SONGS SECTION
+
+Audit all song cards.
+
+If every song card currently contains a Spotify button or repeated streaming CTA:
+
+- Remove redundant per-song Spotify buttons.
+- Keep the songs themselves as the focus.
+- Add one catalog-level CTA beneath the entire section:
+
+"Stream Full Catalog on Spotify"
+
+The goal is to reduce repeated identical buttons while preserving music discovery.
+
+NOW STREAMING EVERYWHERE SECTION
+
+KEEP THIS SECTION.
+
+Do not remove:
+
+- Spotify
+- Apple Music
+- SoundCloud
+
+This section serves a unique purpose by allowing visitors to choose their preferred platform.
+
+This should remain the primary platform-selection area of the website.
+
+WATCH SECTION
+
+Review the section for repeated YouTube or TikTok destination buttons.
+
+If multiple buttons point to the exact same YouTube profile or TikTok profile, consolidate them.
+
+Keep:
+
+- One primary YouTube CTA
+- One primary TikTok CTA
+
+Do not remove embedded content or video previews.
+
+SOCIAL / CONNECT SECTION
+
+Simplify presentation.
+
+If large CTA buttons duplicate actions already available elsewhere:
+
+- Convert to clean social icons or lightweight links.
+- Reduce visual weight.
+- Maintain access to all platforms.
+
+PRESS / FEATURES / BUSINESS INQUIRIES
+
+Review for duplicated Spotify, YouTube, or follow actions.
+
+This section should focus on business communication.
+
+Preferred CTA hierarchy:
+
+- Booking
+- Collaborations
+- Press Inquiries
+- Contact
+
+Avoid repeating streaming CTAs here.
+
+GLOBAL CTA AUDIT
+
+Search the entire homepage for:
+
+- Multiple Spotify buttons leading to the same destination
+- Multiple YouTube buttons leading to the same destination
+- Multiple TikTok buttons leading to the same destination
+- Repeated Follow, Subscribe, Listen, or Watch buttons
+
+When duplicate destinations exist:
+
+- Keep the strongest placement.
+- Remove unnecessary duplicates.
+- Preserve accessibility.
+
+DESIGN GOAL
+
+The site should feel like a professional artist website where every section has one clear purpose:
+
+Hero = Listen
+Top Songs = Discover Music
+Streaming = Choose Platform
+Videos = Watch Content
+Bio = Learn the Story
+Contact = Reach Out
+
+Reduce decision fatigue.
+Reduce visual clutter.
+Increase clarity.
+Maintain all existing branding and content.
+Preserve mobile responsiveness and accessibility.
