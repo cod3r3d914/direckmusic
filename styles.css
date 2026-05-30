@@ -319,10 +319,14 @@ a {
   letter-spacing: 0;
 }
 
-.hero-line {
+.hero-line,
+.hero-line-spacer {
   position: relative;
   max-width: 650px;
   margin: 2.4rem 0 0;
+}
+
+.hero-line {
   color: var(--text);
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.25rem, 6.2vw, 4.75rem);
@@ -334,7 +338,12 @@ a {
     0 12px 32px rgba(228, 33, 44, 0.18);
 }
 
-.hero-line::before {
+.hero-line-spacer {
+  min-height: calc(clamp(2.25rem, 6.2vw, 4.75rem) * 1.78);
+}
+
+.hero-line::before,
+.hero-line-spacer::before {
   position: absolute;
   top: -1.15rem;
   left: 0;
@@ -1523,6 +1532,11 @@ a {
     margin-top: 2.05rem;
     font-size: clamp(2.35rem, 12vw, 4rem);
     line-height: 0.9;
+  }
+
+  .hero-line-spacer {
+    margin-top: 2.05rem;
+    min-height: calc(clamp(2.35rem, 12vw, 4rem) * 1.8);
   }
 
   .hero-actions {
