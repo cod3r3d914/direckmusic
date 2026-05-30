@@ -249,11 +249,11 @@ a {
   pointer-events: none;
   content: "";
   background-image:
-    radial-gradient(circle at 54% 66%, rgba(228, 33, 44, 0.15), transparent 50%),
+    radial-gradient(circle at 54% 52%, rgba(228, 33, 44, 0.15), transparent 50%),
     url("assets/ncmap2-cutout.png");
   background-position:
-    54% 66%,
-    center 66%;
+    54% 52%,
+    center 52%;
   background-repeat: no-repeat;
   background-size:
     74% 70%,
@@ -1625,8 +1625,8 @@ a {
   .hero-copy::before {
     inset: -0.35rem 0 3.2rem 0;
     background-position:
-      50% 64%,
-      center 64%;
+      50% 51%,
+      center 51%;
     background-size:
       78% 68%,
       100% auto;
