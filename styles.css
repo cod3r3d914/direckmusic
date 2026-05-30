@@ -1587,14 +1587,14 @@ a {
   }
 
   .hero-copy::before {
-    inset: 5.1rem -0.9rem 1.2rem 2.8rem;
+    inset: 8.3rem -3.4rem -2.2rem 6.9rem;
     background-position:
-      68% 58%,
-      72% 58%;
+      80% 70%,
+      92% 70%;
     background-size:
-      68% 78%,
-      105% auto;
-    opacity: 0.26;
+      54% 68%,
+      82% auto;
+    opacity: 0.46;
   }
 
   .hero-subtitle {
