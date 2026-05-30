@@ -834,8 +834,13 @@ a {
 }
 
 .release-list {
+  --track-embed-height: 152px;
   display: grid;
   gap: 0.8rem;
+}
+
+.release-list[data-active-player="apple"] {
+  --track-embed-height: 175px;
 }
 
 .release-list[hidden],
@@ -916,13 +921,13 @@ a {
   overflow: hidden;
   border: 1px solid rgba(246, 240, 232, 0.12);
   border-radius: var(--radius);
-  background: rgba(0, 0, 0, 0.25);
+  background: #050505;
 }
 
 .track-embed iframe {
   display: block;
   width: 100%;
-  height: 175px;
+  height: var(--track-embed-height);
   border: 0;
 }
 

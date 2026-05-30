@@ -127,6 +127,7 @@ if (playerToggles.length && playerEmbeds.length) {
     });
 
     if (releaseList && soundcloudPlayer) {
+      releaseList.dataset.activePlayer = platform;
       releaseList.hidden = isSoundCloud;
       soundcloudPlayer.hidden = !isSoundCloud;
     }
