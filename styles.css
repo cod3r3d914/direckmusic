@@ -731,6 +731,16 @@ a {
   display: none;
 }
 
+.catalog-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.catalog-actions .social-card {
+  width: min(100%, 26rem);
+}
+
 .release-card {
   display: grid;
   grid-template-columns: 108px minmax(260px, 1fr) minmax(300px, 430px);
@@ -1130,12 +1140,65 @@ a {
 
 .social-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.65rem;
 }
 
-.social-grid a {
+.social-grid .social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
   width: 100%;
+  min-height: 52px;
+  padding: 0.72rem 0.8rem;
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 850;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(246, 240, 232, 0.12);
+  border-radius: var(--radius);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.social-grid .social-link:hover,
+.social-grid .social-link:focus-visible {
+  color: #fff;
+  background: rgba(228, 33, 44, 0.08);
+  border-color: rgba(228, 33, 44, 0.44);
+  transform: translateY(-1px);
+}
+
+.social-link-icon {
+  display: grid;
+  flex: 0 0 30px;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  background: #050505;
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px rgba(228, 33, 44, 0.48);
+}
+
+.social-link-icon img {
+  display: block;
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+}
+
+.social-link-icon-youtube img,
+.social-link-icon-soundcloud img {
+  width: 22px;
+  height: auto;
+}
+
+.social-link-text-icon {
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 950;
 }
 
 .booking {
