@@ -244,22 +244,22 @@ a {
 
 .hero-copy::before {
   position: absolute;
-  inset: 7.4rem -5.4rem -0.4rem 6.2rem;
+  inset: -0.8rem -2.4rem 5.2rem -1.4rem;
   z-index: -1;
   pointer-events: none;
   content: "";
   background-image:
-    radial-gradient(circle at 64% 58%, rgba(228, 33, 44, 0.14), transparent 48%),
+    radial-gradient(circle at 54% 43%, rgba(228, 33, 44, 0.15), transparent 50%),
     url("assets/ncmap2-cutout.png");
   background-position:
-    64% 58%,
-    78% 58%;
+    54% 43%,
+    center 43%;
   background-repeat: no-repeat;
   background-size:
-    58% 72%,
-    78% auto;
+    74% 70%,
+    108% auto;
   filter: drop-shadow(0 22px 42px rgba(228, 33, 44, 0.2));
-  opacity: 0.38;
+  opacity: 0.34;
 }
 
 .hero-media {
@@ -1587,14 +1587,14 @@ a {
   }
 
   .hero-copy::before {
-    inset: 8.3rem -3.4rem -2.2rem 6.9rem;
+    inset: -0.4rem -1rem 4.7rem -0.8rem;
     background-position:
-      80% 70%,
-      92% 70%;
+      50% 42%,
+      center 42%;
     background-size:
-      54% 68%,
-      82% auto;
-    opacity: 0.46;
+      82% 72%,
+      128% auto;
+    opacity: 0.48;
   }
 
   .hero-subtitle {
