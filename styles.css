@@ -285,6 +285,15 @@ a {
   display: block;
 }
 
+.hero h1 span:last-child {
+  color: rgba(246, 240, 232, 0.66);
+  -webkit-text-stroke: 1px rgba(246, 240, 232, 0.88);
+  text-shadow:
+    4px 4px 0 rgba(80, 0, 4, 0.84),
+    0 0 22px rgba(246, 240, 232, 0.12),
+    0 10px 34px rgba(0, 0, 0, 0.62);
+}
+
 .hero h1 span + span {
   margin-top: 0.06em;
 }
@@ -1587,14 +1596,23 @@ a {
   }
 
   .hero-copy::before {
-    inset: -0.4rem -1rem 4.7rem -0.8rem;
+    inset: -0.35rem 0 5.15rem 0;
     background-position:
-      50% 42%,
-      center 42%;
+      50% 38%,
+      center 38%;
     background-size:
-      82% 72%,
-      128% auto;
-    opacity: 0.48;
+      78% 68%,
+      100% auto;
+    opacity: 0.56;
+  }
+
+  .hero h1 span:last-child {
+    color: rgba(246, 240, 232, 0.62);
+    -webkit-text-stroke: 0.8px rgba(246, 240, 232, 0.9);
+    text-shadow:
+      3px 3px 0 rgba(80, 0, 4, 0.84),
+      0 0 18px rgba(246, 240, 232, 0.14),
+      0 10px 26px rgba(0, 0, 0, 0.64);
   }
 
   .hero-subtitle {
