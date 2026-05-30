@@ -244,15 +244,22 @@ a {
 
 .hero-copy::before {
   position: absolute;
-  inset: 8rem -3.5rem -1.3rem -2.2rem;
+  inset: 7.4rem -5.4rem -0.4rem 6.2rem;
   z-index: -1;
   pointer-events: none;
   content: "";
-  background:
-    radial-gradient(circle at 48% 58%, rgba(228, 33, 44, 0.12), transparent 48%),
-    url("assets/ncmap2-cutout.png") center / contain no-repeat;
-  filter: drop-shadow(0 22px 42px rgba(228, 33, 44, 0.16));
-  opacity: 0.28;
+  background-image:
+    radial-gradient(circle at 64% 58%, rgba(228, 33, 44, 0.14), transparent 48%),
+    url("assets/ncmap2-cutout.png");
+  background-position:
+    64% 58%,
+    78% 58%;
+  background-repeat: no-repeat;
+  background-size:
+    58% 72%,
+    78% auto;
+  filter: drop-shadow(0 22px 42px rgba(228, 33, 44, 0.2));
+  opacity: 0.38;
 }
 
 .hero-media {
@@ -287,6 +294,9 @@ a {
   font-size: clamp(2rem, 5.2vw, 4.25rem);
   line-height: 0.92;
   text-transform: uppercase;
+  text-shadow:
+    3px 3px 0 #050505,
+    6px 6px 0 rgba(228, 33, 44, 0.38);
   transform: rotate(-2deg);
 }
 
@@ -300,6 +310,9 @@ a {
   color: var(--text);
   font-size: clamp(1.25rem, 3vw, 2rem);
   font-weight: 760;
+  text-shadow:
+    2px 2px 0 #050505,
+    4px 4px 0 rgba(228, 33, 44, 0.32);
 }
 
 .artist-meta {
@@ -1543,10 +1556,26 @@ a {
   }
 
   .hero-copy::before {
-    inset: 5.3rem -0.7rem 1.5rem -0.8rem;
-    background-position: center;
-    background-size: 135% auto;
-    opacity: 0.22;
+    inset: 5.1rem -0.9rem 1.2rem 2.8rem;
+    background-position:
+      68% 58%,
+      72% 58%;
+    background-size:
+      68% 78%,
+      105% auto;
+    opacity: 0.26;
+  }
+
+  .hero-subtitle {
+    text-shadow:
+      2px 2px 0 #050505,
+      4px 4px 0 rgba(228, 33, 44, 0.38);
+  }
+
+  .hero-line {
+    text-shadow:
+      2px 2px 0 #050505,
+      3px 3px 0 rgba(228, 33, 44, 0.3);
   }
 
   .intro-player {
