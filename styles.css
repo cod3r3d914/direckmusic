@@ -429,6 +429,20 @@ a {
     0 10px 22px rgba(228, 33, 44, 0.18);
 }
 
+.hero-actions .social-card {
+  background:
+    radial-gradient(circle at 87% 52%, rgba(228, 33, 44, 0.16), transparent 30%),
+    linear-gradient(108deg, rgba(38, 5, 6, 0.58), rgba(10, 7, 8, 0.72) 52%, rgba(45, 4, 7, 0.54));
+  box-shadow:
+    0 0 0 1px rgba(228, 33, 44, 0.34),
+    0 16px 34px rgba(228, 33, 44, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.hero-actions .social-card::before {
+  opacity: 0.48;
+}
+
 .social-card {
   position: relative;
   isolation: isolate;
